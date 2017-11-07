@@ -1,0 +1,2 @@
+cd Desktop\python\Flask\blog
+set FLASK_APP=app.py

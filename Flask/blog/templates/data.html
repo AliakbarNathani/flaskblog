@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Render Test</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Header</th>
+                <th>Content</th>
+            </tr>
+        {% for posts in data %}
+            <tr>
+                <td>{{ posts.title }}</td>
+                <td>{{ posts.body  }}</td>
+            </tr>    
+        {% endfor %}
+        </table>    
+    </body>
+</html>
