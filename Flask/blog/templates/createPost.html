@@ -1,41 +1,26 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Hello, world!</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends 'index.html' %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-offset-4">
-                <br>
-                <h1>Add Post</h1>
-                <form action="/addPost" method="post">
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" name="title" id="title" class="form-control">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="body">Body</label>
-                        <input type="text" name="body" id="body" class="form-control">
-                    </div>
-                    
-                    <input type="submit" class="form-control" value="Add Post">
-                </form>
-            </div>
-        </div>
-    </div>  
+{% block title%}Add Post{% endblock %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
-</html>
+{% block content %}
+      <div class="row">
+          <div class="col-md-4 offset-md-4">
+              <br>
+              <h1>Add Post</h1>
+              <form action="/addPost" method="post">
+                  <div class="form-group">
+                      <label for="title">Title</label>
+                      <input type="text" name="title" id="title" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="body">Body</label>
+                      <input type="text" name="body" id="body" class="form-control">
+                  </div>
+
+                  <input type="submit" class="form-control col-md-4" value="Add Post">
+              </form>
+          </div>
+      </div>
+      <br>
+{% endblock %}

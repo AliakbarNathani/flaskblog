@@ -1,4 +1,5 @@
 from peewee import *
+from flask_login import UserMixin
 
 mysql = MySQLDatabase(host='localhost',user="root",password="root",database="fblog2")
 
@@ -8,7 +9,8 @@ class BaseModel(Model):
         database = mysql
 
 """Model for table user"""
-class User(BaseModel):
+"""UserMixin inherits the property that a class should contain for working of flask-login"""
+class User(UserMixin,BaseModel):
     id = PrimaryKeyField()
     name = CharField()
     email = CharField(unique='true')
