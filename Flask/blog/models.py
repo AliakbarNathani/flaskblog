@@ -1,6 +1,6 @@
 from peewee import *
 
-mysql = MySQLDatabase(host='localhost',user="root",password="root",database="fblog2")
+mysql = MySQLDatabase(host='localhost',user="root",password="",database="fblog2")
 
 """Creating BaseModel with meta is database which will be used by all models"""
 class BaseModel(Model):

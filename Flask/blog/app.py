@@ -1,5 +1,5 @@
 from flask import Flask,url_for, redirect, request,render_template,flash,session
-from flask_login import login_required, current_user
+from flask_login import login_required, current_user,LoginManager
 from models import *
 
 app = Flask(__name__)
